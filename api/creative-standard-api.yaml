@@ -1,0 +1,55 @@
+openapi: 3.0.0
+info:
+  title: Global Creative AI Platform API
+  version: 1.0.0
+  description: API for standardizing creative pitches and maximizing employment opportunities.
+paths:
+  /v1/pitch/generate:
+    post:
+      summary: Convert portfolio data into a targeted pitch
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                creator_id:
+                  type: string
+                target_company_url:
+                  type: string
+                industry_standard:
+                  type: string
+                  enum: [TECH, LUXURY, ENTERTAINMENT, FINANCE]
+      responses:
+        '200':
+          description: Pitch generated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  pitch_deck_url:
+                    type: string
+                  match_score:
+                    type: number
+                  suggested_edits:
+                    type: array
+                    items:
+                      type: string
+
+  /v1/standards/validate:
+    post:
+      summary: Check if a portfolio meets global AI-standard requirements
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                portfolio_data:
+                  type: object
+      responses:
+        '200':
+          description: Validation results
