@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package creative.v1;
+
+// Standardized Creative Schema for Global Interoperability
+message CreativePortfolio {
+  string creative_id = 1;
+  string display_name = 2;
+  repeated MediaAsset assets = 3;
+  map<string, string> ai_metadata = 4;
+}
+
+message MediaAsset {
+  string asset_id = 1;
+  string asset_url = 2;
+  string asset_type = 3; // e.g., video, image, 3d
+  repeated string tags = 4;
+  VectorEmbedding embedding = 5;
+}
+
+message VectorEmbedding {
+  repeated float values = 1;
+}
+
+service PortfolioService {
+  rpc GetStandardizedPortfolio(PortfolioRequest) returns (CreativePortfolio);
+}
+
+message PortfolioRequest {
+  string creative_id = 1;
+}
