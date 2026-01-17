@@ -1,0 +1,18 @@
+[SCORING RUBRIC: CREATIVE UNLOCK AI v1.0]
+
+1. TECHNICAL SKILL (0-100)
+   - Layout: Is there a clear visual hierarchy?
+   - Detail: Precision in edges, typography spacing (kerning), and resolution.
+   - Code/Grammar: For copy or web work, is the syntax flawless?
+
+2. MARKET ALIGNMENT (0-100)
+   - Trend Relevance: Does it fit current high-value aesthetic trends (e.g., Neo-minimalism)?
+   - Industry Specificity: Does the style match the intended sector (e.g., playful for toys, sober for law)?
+
+3. INNOVATION INDEX (0-100)
+   - Pattern Break: Does the work deviate from common 'Behance-style' templates?
+   - Concept Depth: Is there a strong metaphor or narrative behind the visual?
+
+4. ACTIONABLE FEEDBACK GENERATION
+   - Identify the weakest score.
+   - Provide a specific "Next Step" (e.g., "Improve white space usage in mobile headers").
