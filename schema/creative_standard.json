@@ -1,0 +1,38 @@
+{
+  "$schema": "https://api.creativeunlock.ai/v1/schemas/json-c",
+  "title": "Unified Creative Schema (JSON-C)",
+  "description": "Standardized data structure for AI-driven portfolio analysis",
+  "type": "object",
+  "properties": {
+    "talent_id": { "type": "string", "format": "uuid" },
+    "analysis_timestamp": { "type": "string", "format": "date-time" },
+    "creative_dna": {
+      "type": "object",
+      "properties": {
+        "primary_style": { "type": "string", "enum": ["Minimalist", "Maximalist", "Corporate", "Grunge", "Bauhaus", "Cyberpunk"] },
+        "color_palette": { "type": "array", "items": { "type": "string" } },
+        "typography_signature": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "scores": {
+      "type": "object",
+      "properties": {
+        "overall_pitch_score": { "type": "number", "minimum": 0, "maximum": 100 },
+        "technical_proficiency": { "type": "number" },
+        "commercial_readiness": { "type": "number" },
+        "innovation_index": { "type": "number" }
+      }
+    },
+    "ai_feedback": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "category": { "type": "string" },
+          "observation": { "type": "string" },
+          "actionable_tip": { "type": "string" }
+        }
+      }
+    }
+  }
+}
